@@ -41,3 +41,14 @@ function theWinnerIs() {
 const randomWinner = document.getElementById("random-winner");
 // console.log(randomWinner);
 randomWinner.addEventListener("click", theWinnerIs);
+//!-----------------------------------------------------------------
+//!Multi
+//TODO: display n*n = n**2
+//*Part 1
+const addNum = document.getElementById("add-num");
+// console.log(addNum);
+function calcNum() {
+  console.log("test");
+}
+addNum.addEventListener("click", calcNum);
+//*Display all mult
