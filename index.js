@@ -134,16 +134,30 @@ const readTblPart = document.getElementById("read-tbl");
 
 // console.log(readTblPart);
 
+// function readTbl() {
+//   for (let i = 1; i < vegTarget.childNodes.length; i = i + 2) {
+//     for (let j = 1; j < vegTarget.childNodes.length; j = j + 2) {
+//       console.log(
+//         "L'élément : " +
+//           vegTarget.childNodes[i].childNodes[1].innerText +
+//           " coutait " +
+//           vegTarget.childNodes[i].childNodes[j + 2].innerText +
+//           " euros le kilo en " +
+//           month.childNodes[j + 2].innerText
+//       );
+//     }
+//   }
+// }
 function readTbl() {
   for (let i = 1; i < vegTarget.childNodes.length; i = i + 2) {
-    for (let j = 1; j < vegTarget.childNodes.length; j = j + 2) {
+    for (let j = 1; j < 4; j++) {
       console.log(
         "L'élément : " +
-          vegTarget.childNodes[i].childNodes[1].innerText +
+          vegTarget.childNodes[i].cells[0].innerText +
           " coutait " +
-          vegTarget.childNodes[i].childNodes[j + 2].innerText +
+          vegTarget.childNodes[i].cells[j].innerText +
           " euros le kilo en " +
-          month.childNodes[j + 2].innerText
+          month.cells[j].innerText
       );
     }
   }
@@ -160,14 +174,14 @@ var resultTbl = new Array();
 
 function creatTbl() {
   for (let i = 1; i < vegTarget.childNodes.length; i = i + 2) {
-    for (let j = 1; j < vegTarget.childNodes.length; j = j + 2) {
+    for (let j = 1; j < 4; j++) {
       let el =
         "L'élément : " +
-        vegTarget.childNodes[i].childNodes[1].innerText +
+        vegTarget.childNodes[i].cells[0].innerText +
         " coutait " +
-        vegTarget.childNodes[i].childNodes[j + 2].innerText +
+        vegTarget.childNodes[i].cells[j].innerText +
         " euros le kilo en " +
-        month.childNodes[j + 2].innerText;
+        month.cells[j].innerText;
       let newVariation = variations.insertRow();
       let variationCell = newVariation.insertCell(0);
       let variationContent = document.createTextNode(el);
