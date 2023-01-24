@@ -135,8 +135,8 @@ const readTblPart = document.getElementById("read-tbl");
 // console.log(readTblPart);
 
 function readTbl() {
-  for (let i = 1; i <= 6; i = i + 2) {
-    for (let j = 1; j < 6; j = j + 2) {
+  for (let i = 1; i < vegTarget.childNodes.length; i = i + 2) {
+    for (let j = 1; j < vegTarget.childNodes.length; j = j + 2) {
       console.log(
         "L'élément : " +
           vegTarget.childNodes[i].childNodes[1].innerText +
@@ -150,9 +150,54 @@ function readTbl() {
 }
 
 readTblPart.addEventListener("click", readTbl);
+
 //*gen tbl => fluctuation prices
+const variations = document.getElementById("variations");
+const dispDif = document.getElementById("difference");
+
+var resultTbl = new Array();
+
+function creatTbl() {
+  for (let i = 1; i < vegTarget.childNodes.length; i = i + 2) {
+    for (let j = 1; j < vegTarget.childNodes.length; j = j + 2) {
+      let el =
+        "L'élément : " +
+        vegTarget.childNodes[i].childNodes[1].innerText +
+        " coutait " +
+        vegTarget.childNodes[i].childNodes[j + 2].innerText +
+        " euros le kilo en " +
+        month.childNodes[j + 2].innerText;
+      let newVariation = variations.insertRow();
+      let variationCell = newVariation.insertCell(0);
+      let variationContent = document.createTextNode(el);
+      variationCell.appendChild(variationContent);
+    }
+  }
+  return;
+}
+console.log(vegTarget.childNodes.length);
+
+dispDif.addEventListener("click", creatTbl);
 //!-----------------
 //!trash
+// console.log(creatTbl());
+// console.log(dispDif);
+// console.log(variations);
+// function creatTbl() {
+//   for (let i = 1; i <= 6; i = i + 2) {
+//     for (let j = 1; j < 6; j = j + 2) {
+//       resultTbl.push(
+//         "L'élément : " +
+//           vegTarget.childNodes[i].childNodes[1].innerText +
+//           " coutait " +
+//           vegTarget.childNodes[i].childNodes[j + 2].innerText +
+//           " euros le kilo en " +
+//           month.childNodes[j + 2].innerText
+//       );
+//     }
+//   }
+//   return resultTbl;
+// }
 // const veg2 = document.getElementById("veg2");
 // const veg3 = document.getElementById("veg3");
 // console.log(veg1.childNodes);
