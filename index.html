@@ -9,14 +9,28 @@
   </head>
   <body>
     <div class="container">
-      <button class="add-name" id="addName">Ajouter un nom</button>
+      <!-- Tirage au sort -->
+      <!-- <button class="add-name" id="addName">Ajouter un nom</button>
       <button class="random-winner" id="random-winner">
         Donner un gagnant!
-      </button>
+      </button> -->
+      <!-- ------------------------ -->
+      <!-- Multiplication -->
       <p>
         <button class="add-num" id="add-num">Donner la table des mult</button>
+        <table id="results">
+          <caption>Résultats des multiplications</caption>
+          <thead><tr>
+            <td>1er terme</td>
+            <td>2eme terme</td>
+            <td>Résultat</td>
+          </tr></thead>
+          <tbody id="row-target"></tbody>
+
+        </table>
       </p>
     </div>
+    <div id="test"></div>
     <script src="./index.js"></script>
   </body>
 </html>

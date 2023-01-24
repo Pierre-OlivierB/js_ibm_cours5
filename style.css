@@ -6,3 +6,21 @@
 /* body {
   background: red;
 } */
+body {
+  height: 100vh;
+}
+#results {
+  width: 50%;
+  border: 1px solid black;
+  margin: 20px auto;
+}
+#results caption {
+  border: 2px solid lightcoral;
+}
+#results tr {
+  border: 1px solid grey;
+}
+#results td {
+  border: 1px solid lightblue;
+  text-align: center;
+}
