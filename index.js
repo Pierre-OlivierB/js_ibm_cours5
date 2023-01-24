@@ -152,6 +152,7 @@ function readTbl() {
 readTblPart.addEventListener("click", readTbl);
 
 //*gen tbl => fluctuation prices
+
 const variations = document.getElementById("variations");
 const dispDif = document.getElementById("difference");
 
@@ -175,9 +176,38 @@ function creatTbl() {
   }
   return;
 }
-console.log(vegTarget.childNodes.length);
+// console.log(vegTarget.childNodes.length);
 
 dispDif.addEventListener("click", creatTbl);
+//*---------------------------------------------------
+//*add tomato
+const addTomato = document.getElementById("tomato");
+// console.log(addTomato);
+
+function addEl(name, pFMonth, pSMonth, pTMonth) {
+  let newEl = vegTarget.insertRow();
+  let firstCell = newEl.insertCell(0);
+  let secCell = newEl.insertCell(1);
+  let thirdCell = newEl.insertCell(2);
+  let fourthCell = newEl.insertCell(3);
+  let firstContent = document.createTextNode(name);
+  let secContent = document.createTextNode(pFMonth);
+  let thirdContent = document.createTextNode(pSMonth);
+  let fourthContent = document.createTextNode(pTMonth);
+  firstCell.appendChild(firstContent);
+  secCell.appendChild(secContent);
+  thirdCell.appendChild(thirdContent);
+  fourthCell.appendChild(fourthContent);
+  // console.log("test");
+}
+// var tomato = addEl("tomate", "4.34", "3.13", "2.77");
+// addTomato.addEventListener("click", () => {
+//   addEl("tomate", "4.34", "3.13", "2.77");
+// });
+addTomato.addEventListener(
+  "click",
+  addEl.bind(this, "tomate", "4.34", "3.13", "2.77")
+);
 //!-----------------
 //!trash
 // console.log(creatTbl());
@@ -221,7 +251,7 @@ dispDif.addEventListener("click", creatTbl);
 // y = j + 2;
 // }
 // console.log(vegTarget);
-var vegInfo = new Array();
+// var vegInfo = new Array();
 // vegInfo.push("abricot", "5.80", "3.37", "3.72");
 // vegInfo.push("fraise", "10.57", "11.11", "12.84");
 // vegInfo.push("abricot", "1.66", "2.34", "1.98");
