@@ -93,8 +93,34 @@ function calcNum() {
 }
 // console.log(result);
 addNum.addEventListener("click", calcNum);
+//!----------------------------------------------------
 //*Display all mult
+const tblMult = document.getElementById("row-target-mult");
+const dMult = document.getElementById("d-cal");
 
+function calcNum2() {
+  for (let i = 1; i <= 10; i++) {
+    for (let j = 1; j <= 10; j++) {
+      let multNum = 0;
+      multNum = i * j;
+      result.push(i, j, multNum);
+      let newCalc = tblMult.insertRow();
+      let firstCell = newCalc.insertCell(0);
+      let secCell = newCalc.insertCell(1);
+      let thirdCell = newCalc.insertCell(2);
+      let firstContent = document.createTextNode(i);
+      let secContent = document.createTextNode(j);
+      let thirdContent = document.createTextNode(multNum);
+      firstCell.appendChild(firstContent);
+      secCell.appendChild(secContent);
+      thirdCell.appendChild(thirdContent);
+    }
+  }
+
+  console.log(result);
+  return result;
+}
+dMult.addEventListener("click", calcNum2);
 // const test = document.getElementById("test");
 // console.log(test);
 // test.addEventListener("click", (e)=>{});

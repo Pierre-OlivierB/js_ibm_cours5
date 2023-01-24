@@ -18,7 +18,7 @@
       <!-- Multiplication -->
       <p>
         <button class="add-num" id="add-num">Donner la table des mult</button>
-        <table id="results">
+        <table class="results" id="results">
           <caption>Résultats des multiplications</caption>
           <thead><tr>
             <td>1er terme</td>
@@ -29,6 +29,18 @@
 
         </table>
       </p>
+      <section id="tbl-mult">
+        <button id="d-cal">Afficher les tables</button>
+        <table class="results" id="mult">
+          <caption>Tables des multiplications</caption>
+          <thead><tr>
+            <td>1er terme</td>
+            <td>2eme terme</td>
+            <td>Résultat</td>
+          </tr></thead>
+          <tbody id="row-target-mult"></tbody>
+        </table>
+      </section>
     </div>
     <div id="test"></div>
     <script src="./index.js"></script>
