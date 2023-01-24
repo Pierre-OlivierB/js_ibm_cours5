@@ -92,7 +92,7 @@ function calcNum() {
   return result;
 }
 // console.log(result);
-addNum.addEventListener("click", calcNum);
+// addNum.addEventListener("click", calcNum);
 //!----------------------------------------------------
 //*Display all mult
 const tblMult = document.getElementById("row-target-mult");
@@ -120,7 +120,65 @@ function calcNum2() {
   console.log(result);
   return result;
 }
-dMult.addEventListener("click", calcNum2);
+// dMult.addEventListener("click", calcNum2);
 // const test = document.getElementById("test");
 // console.log(test);
 // test.addEventListener("click", (e)=>{});
+//!------------------------------------------------------
+//*Variation price
+//TODO: add var in Array(); function = w read tbl with log; function = add e in tbl; add tomato 4.34mai,3.13juin,2.77juillet
+const vegTarget = document.getElementById("veg-target");
+const veg1 = document.getElementById("veg1");
+const month = document.getElementById("month");
+const readTblPart = document.getElementById("read-tbl");
+
+// console.log(readTblPart);
+
+function readTbl() {
+  for (let i = 1; i <= 6; i = i + 2) {
+    for (let j = 1; j < 6; j = j + 2) {
+      console.log(
+        "L'élément : " +
+          vegTarget.childNodes[i].childNodes[1].innerText +
+          " coutait " +
+          vegTarget.childNodes[i].childNodes[j + 2].innerText +
+          " euros le kilo en " +
+          month.childNodes[j + 2].innerText
+      );
+    }
+  }
+}
+
+readTblPart.addEventListener("click", readTbl);
+//*gen tbl => fluctuation prices
+//!-----------------
+//!trash
+// const veg2 = document.getElementById("veg2");
+// const veg3 = document.getElementById("veg3");
+// console.log(veg1.childNodes);
+// console.log(month.childNodes[3].innerText);
+// console.log(vegTarget.childNodes[3].childNodes[1].innerText);
+// console.log(veg1.childNodes[i].innerText);
+// if (i == 1) {
+// for (let j = 1; j <= 3; j++) {
+//   let veg = "veg";
+//   veg += j;
+// console.log(
+//   "L'élément : " +
+//     veg1.childNodes[1].innerText +
+//     " coutait " +
+//     veg1.childNodes[i + 2].innerText +
+//     " euros le kilo en " +
+//     month.childNodes[i + 2].innerText
+// );
+// }
+// x = i + 2;
+// y = j + 2;
+// }
+// console.log(vegTarget);
+var vegInfo = new Array();
+// vegInfo.push("abricot", "5.80", "3.37", "3.72");
+// vegInfo.push("fraise", "10.57", "11.11", "12.84");
+// vegInfo.push("abricot", "1.66", "2.34", "1.98");
+
+// console.log(vegInfo);
